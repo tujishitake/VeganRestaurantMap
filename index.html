@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vegan Restaurant Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img src="header-img.jpg">
+      <h1>VEGAN RESTAURANT MAP</h1>
+      <h2>Find a Vegan Restaurant<br>Near You!</h2>
+    </header>
+    
+    <div class="map">
+      <div id="floating-panel">
+        <b>交通手段: </b>
+        <select id="mode">
+          <option value="DRIVING">Driving</option>
+          <option value="WALKING">Walking</option>
+          <!--<option value="BICYCLING">Bicycling</option>-->
+          <!--<option value="TRANSIT">Transit</option>-->
+        </select>
+      </div>
+      
+      <span id="map_title">【都内ヴィーガンレストランマップ】</span>
+      <span class="glyphicon glyphicon-chevron-down">マップ内のマーカーをクリックしてみよう！</span>
+      <span id="move_to_list">レストラン一覧からさがす</span>
+      <div id="map_canvas">
+        位置情報を取得しています....
+      </div>
+      <div id="area_name"></div>
+    </div>
+    
+    <div class="list">
+      <div class="container">
+        <p class="title">現在地から近いヴィーガンレストラン</p>
+        <p><span class="glyphicon glyphicon-chevron-down">気になるレストランをクリックしてみよう！</span></p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="col-xs-2">順番</th>
+              <th class="col-xs-8">店名</th>
+              <th class="col-xs-2">現在地からの距離</th>
+            </tr>
+          </thead>
+          <tbody id="data-list"></tbody>
+        </table>
+      </div>
+    </div>
+    
+    <footer>&copy; 2017 Vegan Restaurant Map</footer>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrCeUfLYctf1w8flZOWGq9W-4DiBCLess&callback=initMap" async defer></script>
+  </body>
+</html>
